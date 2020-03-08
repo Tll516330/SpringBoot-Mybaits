@@ -10,4 +10,8 @@ public class method {
 
 
     }
+
+    public String ha(){
+        return "你好,Git";
+    }
 }
