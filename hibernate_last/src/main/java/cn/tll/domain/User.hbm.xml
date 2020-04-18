@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 在实体类所在的包下，创建一个xml文件。该文件建议名称为：实体类名称+.hbm+.xml 
+导入约束：dtd约束
+-->
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!--<hibernate-mapping package="cn.tll.domain">-->
+	<hibernate-mapping package="cn.tll.domain">
+	<class name="User">
+		<id name="id" >
+			<!-- generator：是指定主键的生成方式。取值是固定的几个之中选一个
+				native是使用本地数据库的自动增长能力。
+			 -->
+			<generator class="native"></generator>
+		</id>
+		<property name="name"/>
+		<property name="brithday"/>
+	</class>
+</hibernate-mapping>

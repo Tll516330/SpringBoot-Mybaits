@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+
+    <!--mysql用户名-->
+
+    <!--mysql密码-->
+
+    <!--mysql驱动-->
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+
+    <!--mysql连接url-->
+    <!--建议：mysql的url最好是这样写，如果连接远程mysql,只需把127.0.0.0.1改为远程mysql地址-->
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/test</property>
+
+    <!--数据库方言-->
+    <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+
+    <!--显示sql语句-->
+    <property name="show_sql">true</property>
+
+    <!--格式化sql语句-->
+    <property name="format_sql">true</property>
+
+    <!--自动生成表-->
+    <property name="hbm2ddl.auto">create</property>
+    <!-- DB schema will be updated if needed -->
+    <!-- <property name="hbm2ddl.auto">update</property> -->
+
+    <!--映射-->
+    <!--<mapping resource="cn/tll/domain/User.hbm.xml"/>-->
+
+    <mapping class="cn.tll.domain.UserEntity"/>
+    <mapping resource="cn/tll/domain/UserEntity.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>
