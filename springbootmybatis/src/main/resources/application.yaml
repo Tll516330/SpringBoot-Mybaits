@@ -1,0 +1,11 @@
+#连接数据库
+spring:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3360/studemo?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#整合mybatis
+mybatis:
+  type-aliases-package: cn.tll.pojo
+  mapper-locations: classpath:mybatis/mapper/*.xml
